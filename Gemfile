@@ -27,10 +27,18 @@ gem 'jbuilder', '~> 2.7'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
+# Graphql
+gem "graphql"
+# Graphiql Rails
+# Use the GraphiQL IDE for GraphQL with Ruby on Rails. 
+# This gem includes an engine, a controller and a view 
+# for integrating GraphiQL with your app.
+gem "graphiql-rails"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+
 end
 
 group :development do
@@ -39,6 +47,10 @@ group :development do
   # Display performance information such as SQL time and flame graphs for each request in your browser.
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
   gem 'rack-mini-profiler', '~> 2.0'
+  # Annotates Rails/ActiveRecord Models, routes, fixtures, and others based on the database schema.
+  # an·no·tate/ˈanəˌtāt/ verb add notes to (a text or diagram) giving explanation or comment.
+  # documentation should be annotated with explanatory notes
+  gem 'annotate', '~> 2.7', '>= 2.7.1'
 end
 
 group :test do
@@ -51,3 +63,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'graphiql-rails', group: :development
+gem 'graphiql-rails', group: :development
